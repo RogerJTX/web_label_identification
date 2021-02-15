@@ -3,7 +3,7 @@
 description: Identify the tags of a web page
 date: 2019_04_12
 url：http://oei.hust.edu.cn/szdw.htm 华中科技大学 光电
-aurhor：xiajuntao
+aurhor：jtx
 """
 import sys
 import os
@@ -223,7 +223,7 @@ class ListDetailSpider(object):
 
     # 各个分类的关键词判断啊
     def key_word_collection_and_judge(self, title_judge, num, title_judge_dict):
-        stopwords = self.stopwordslist("D:\Python\python_code\Liangzhi\TianPengTrans-tmp\etl\pytorch\百度停用词表_修改.txt")
+        stopwords = self.stopwordslist("..etl\pytorch\百度停用词表_修改.txt")
         delete_word1 = re.findall(r"\((.+?)\)", title_judge)
         delete_word2 = re.findall(r"（(.+?)）", title_judge)
         for each_1 in delete_word1:
